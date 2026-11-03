@@ -1,3 +1,24 @@
+local ProtectionConfig = {
+    SecretKey = "CDEVSYBAU",
+    
+    HubName = "C-HUB"
+}
+
+if not _G[ProtectionConfig.SecretKey] then
+    local player = game:GetService("Players").LocalPlayer
+    if player then
+        player:Kick("\n🛡️ Unauthorized Execution 🛡️\n\nPlease use the official Key System to run " .. ProtectionConfig.HubName)
+    end
+    return -- Stops the rest of the script from loading!
+end
+
+-------------------------------------------------------------------------------
+-- 👇 YOUR MAIN SCRIPT CODE STARTS HERE 👇
+-------------------------------------------------------------------------------
+
+print(ProtectionConfig.HubName .. " Loaded Successfully!")
+
+
 --[[
     C-HUB (version 1.0) — Aimbot, ESP & TriggerBot panel
     [L] show/hide UI   [=] aim   [-] FOV circle   [ ] ] ESP charms   [ [ ] head/body
